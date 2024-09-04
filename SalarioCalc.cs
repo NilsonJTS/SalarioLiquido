@@ -5,9 +5,6 @@ namespace Ex_C__Natal_04_09_24;
 public class SalarioCalc
 {
     public double salario =0;
-    public double ir=0;
-    public double inss=0;
-
 
     public SalarioCalc()
     {
@@ -19,15 +16,15 @@ public class SalarioCalc
         this.calcular();
     }
 
-    public double calcular(){
-        double resultado=0;
+    public void calcular(){
+        double resultado=0, ir, inss;
         ir = this.salario*0.10;
         inss = this.salario*0.05;
-        resultado=this.salario-this.inss-this.ir;
-        Console.WriteLine("Valor de INSS: "+this.inss);
-        Console.WriteLine("Valor de IR: "+this.ir);
+        resultado=this.salario-inss-ir;
+        Console.WriteLine("Valor de INSS: "+inss);
+        Console.WriteLine("Valor de IR: "+ir);
         Console.WriteLine("Salário líquido: "+resultado);
-        return resultado;
+        
     }
 
 }
